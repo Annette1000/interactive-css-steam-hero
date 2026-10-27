@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+@import url("reset.css");
+/*
+
+FONTS
+
+// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 900
+
+.arial-<uniquifier> {
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arial-<uniquifier> {
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arial-<uniquifier> {
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arial-<uniquifier> {
+  font-family: "Arial", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.new-rocker-<uniquifier> {
+  font-family: "New Rocker", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+COLORS
+
+top-nav:#3D4947
+mid-nav:#384342
+bottom-nav:#4B595D
+search-box-fill:#5B6A68
+search-box-stroke:#748381
+light-gray:#C5C3C0
+white:#FFFFFF
+bright-blue:#15BEF7
+muted-yellow:#FAE59D
+gradient-defalt:radial-gradient(to right, yellow:#F9BC6D, orange:#F79F70)
+gradient-active:radial-gradient(to right, bright-orange:#F27634, bright-yellow:#FCA533)
+hero-gradient: linear-gradient(to right, muted-purple:#FCA533, yellow:#F9BC6D, cream-orange:#FCDAC9)
+*/
+
+:root {
+  --top-nav: #3D4947;
+  --mid-nav: #384342;
+  --bottom-nav: #4B595D;
+  --search-box-fill: #5B6A68;
+  --search-box-stroke: #748381;
+  --light-gray: #C5C3C0;
+  --white: #FFFFFF;
+  --bright-blue: #15BEF7;
+  --muted-yellow: #FAE59D;
+
+  --gradient-defalt: radial-gradient(
+    circle at center,
+    rgba(249, 188, 109, 1) 0%
+    rgba(247, 159, 112, 1) 100%
+  );
+  --gradient-active: radial-gradient(
+    circle at center,
+    rgba(242, 118, 52, 1) 0%
+    rgba(252, 165, 51, 1) 100%
+  );
+  --hero-gradient: linear-gradient(
+    180deg,
+    rgba(149, 109, 129, 1) 65%,
+    rgba(249, 188, 109, 1) 87% rgb(252, 218, 201) 100%
+  );
+
+  --fonttype-hero-text: "New Rocker", sans-serif;
+  --fonttype-majority-text: "Arial", sans-serif;
+
+  --fontweight-black: 900;
+  --fontweight-bold: 700;
+  --fontweight-regular: 400;
+
+  /* Desktop Specific */
+
+  --fontsize-medium: 2.8rem;
+  --fontsize-large: 4.8rem;
+  --fontsize-h1: 7.8rem;
+  --fontsize-h2: 4rem;
+  --fontsize-h3: 3.4rem;
+  --fontsize-h4: 1.6rem;
+  --fontsize-h5: 1.4rem;
+  --fontsize-h6: 1.2rem;
+
+  --lineheight-medium: 3.9rem;
+  --lineheight-large:6.8rem;
+  --lineheight-h1: 0.947rem;
+  --lineheight-h2: 0.947rem;
+  --lineheight-h3: 4.2rem;
+  --lineheight-h4: 1.8rem;
+  --lineheight-h5: 1.6rem;
+  --lineheight-h6: 1.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-decoration: underline;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width: 500px;
+  max-width: 80%;
+}
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.modal-body {
+  padding: 10px 15px;
+}
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
