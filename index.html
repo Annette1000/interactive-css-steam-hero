@@ -11,39 +11,47 @@
   <body>
         <header>
           <top-nav>
-            <ul>
-              <li>
-                <a href="index.html"
-                  ><img src="images/steam-logo.png" class="logo" />
-                </a>
-              </li>
-              <div class="top-left-nav">
-                <li><a href="index.html">View</a></li>
-                <li><a href="index.html">Friends</a></li>
-                <li><a href="index.html">Games</a></li>
-                <li><a href="index.html">Help</a></li>
-              </div>
-            </ul>
+            <div class="steam-logo">
+              <ul>
+                <li>
+                  <a href="index.html"
+                    ><img src="images/steam-logo.png" class="logo" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="top-left-nav">
+              <ul>
+                  <li><a href="index.html">View</a></li>
+                  <li><a href="index.html">Friends</a></li>
+                  <li><a href="index.html">Games</a></li>
+                  <li><a href="index.html">Help</a></li>
+              </ul>
+            </div>
           </top-nav>
-          <mid-left-nav>
-            <ul>
-              <li>
-                <a href="index.html"
-                  ><img src="images/back-arrow.png" class="back-arrow" />
-                </a>
-                <a href="index.html"
-                  ><img src="images/forward-arrow.png" class="forward-arrow" />
-                </a>
-              </li>
-              <div class="mid-left-nav">
+          <bottom-left-nav>
+            <div class="arrow-nav-btns">
+              <ul>
+                <li>
+                 <a href="index.html"
+                   ><img src="images/back-arrow.png" class="back-arrow" />
+                  </a>
+                 <a href="index.html"
+                   ><img src="images/forward-arrow.png" class="forward-arrow" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="main-menu-nav">
+              <ul>
                 <li><a href="index.html">STORE</a></li>
                 <li><a href="index.html">LIBRARY</a></li>
                 <li><a href="index.html">COMMUNITY</a></li>
                 <li><a href="index.html">JANEDOE</a></li>
-              </div>
-            </ul>
-          </mid-left-nav>
-          <mid-right-nav>
+              </ul>
+            </div>
+          </bottom-left-nav>
+          <bottom-right-nav>
             <ul>
               <li>
                 <a href="index.html"
@@ -59,42 +67,15 @@
                       alt="View Notifications"
                       title="View Notifications"/></button>
                 <div class="modal" id="modal">
-                  <div class=modal-header">
+                  <div class="modal-header">
                     <div class="title">
                       <h3>Check It Out</h3>
                       <h2>Some Items From Your Wishlist Are On Sale!</h2>
                     </div>
-                    <button data-close-button class="close button">&times;</button>
+                    <button data-close-button class="close-button">&times;</button>
                   </div>
                   <div class="modal-body">
                     <ul>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/bunny-park.jpg"
-                          alt="Bunny Park"
-                          title="Bunny Park"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/stardew-valley.jpg"
-                          alt="Stardew Valley"
-                          title="Stardew Valley"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/garden-paws.jpg"
-                          alt="Garden Paws"
-                          title="Garden Paws"
-                          class="wishlist-img"
-                          />
-                      </li>
                       <li>
                         <a href="index.html">
                         <img
@@ -103,6 +84,7 @@
                           title="Dragon Age: Inquisition"
                           class="wishlist-img"
                           />
+                          </a>
                       </li>
                       <li>
                         <a href="index.html">
@@ -112,24 +94,7 @@
                           title="RPG Maker MZ"
                           class="wishlist-img"
                           />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/wallpaper-engine.jpg"
-                          alt="Wallpaper Engine"
-                          title="Wallpaper Engine"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/overcooked.jpg"
-                          alt="Overcooked"
-                          title="Overcooked"
-                          class="wishlist-img"
-                          />
+                          </a>
                       </li>
                       <li>
                         <a href="index.html">
@@ -139,151 +104,16 @@
                           title="Deltarune"
                           class="wishlist-img"
                           />
+                          </a>
                       </li>
                     </ul>
                   </div>
                     <a href="index.html" class="btn-default">Shop Sale</a>
                 </div>
                   <div id="overlay"></div>
-                  <div class="page">
               </li>
-              <li>
-                <a href="index.html"
-                  ><img src="images/account.png"
-                        alt="Janedoe"
-                        title="Manage Account"
-                        class="account-btn" />
-                </a>
-              </li>
-              <li>
-                <a href="index.html"
-                  ><img src="images/big-pic-mode.png"
-                        alt="Enter Big Picture Mode"
-                        title="Enter Big Picture Mode"
-                        class="big-pic-btn" />
-                </a>
-              </li>
-            </div>
-          </ul>
-        </mid-right-nav>
-        <web-link>
-          <ul>
-            <li>
-              <img src="images/refresh.png" class="refresh-btn" />
-            </li>
-            <li>
-              <a href="https://store.steampowered.com/">https://store.steampowered.com/</a>
-            </li>
-          </ul>
-        </web-link>
-        <bottom-nav>
-          <ul>
-              <li><a href="index.html">Browse</a></li>
-              <li><a href="index.html">Recommendations</a></li>
-              <li><a href="index.html">Categories</a></li>
-              <li><a href="index.html">Hardware</a></li>
-              <li><a href="index.html">Ways to Play</a></li>
-              <li><a href="index.html">Special Sections</a></li>
-              <li>
-                <button>
-                Search the Store
-                <img src="images/search.png" class="search-icon" />
-              </button>
-              </li>
-              <li>
-                <button data-modal-target="#modal">
-                  <img src="images/steam-wishlist.png"
-                      alt="Wishlist"
-                      title="Wishlist"/></button>
-                <div class="modal" id="modal">
-                  <div class=modal-header">
-                    <div class="title">
-                      <h3>Check It Out</h3>
-                      <h2>Some Items From Your Wishlist Are On Sale!</h2>
-                    </div>
-                    <button data-close-button class="close button">&times;</button>
-                  </div>
-                  <div class="modal-body">
-                    <ul>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/bunny-park.jpg"
-                          alt="Bunny Park"
-                          title="Bunny Park"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/stardew-valley.jpg"
-                          alt="Stardew Valley"
-                          title="Stardew Valley"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/garden-paws.jpg"
-                          alt="Garden Paws"
-                          title="Garden Paws"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/dragon-age-inquistion.jpg"
-                          alt="Dragon Age: Inquisition"
-                          title="Dragon Age: Inquisition"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/rpg-maker-mz.jpg"
-                          alt="RPG Maker MZ"
-                          title="RPG Maker MZ"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/wallpaper-engine.jpg"
-                          alt="Wallpaper Engine"
-                          title="Wallpaper Engine"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/overcooked.jpg"
-                          alt="Overcooked"
-                          title="Overcooked"
-                          class="wishlist-img"
-                          />
-                      </li>
-                      <li>
-                        <a href="index.html">
-                        <img
-                          src="images/deltarune.jpg"
-                          alt="Deltarune"
-                          title="Deltarune"
-                          class="wishlist-img"
-                          />
-              </li>
-          </ul>
-        <div>
-        <a href="index.html" class="btn-default">Shop Sale</a>
-    </div>
-      <div id="overlay"></div>
-      <div class="page"></div>
-        </bottom-nav>
+            </ul>
+          </bottom-right-nav>
       </header>
       <main>
         <section class="hero">
@@ -297,7 +127,7 @@
             Nov. 27-Dec.4 at 10am Pacific
           </h4>
             </div>
-            <div class=hero-right>
+            <div class="hero-right">
               <a href="index.html" class="btn-default">Shop Sale</a>
             </div>
             <div class="featured-games">
@@ -310,6 +140,7 @@
                     title="Assassins Creed: Valhalla"
                     class="hero-img"
                   />
+                  </a>
                   </li>
                   <li>
                     <a href="index.html">
@@ -319,6 +150,7 @@
                       title="Hollow Knight"
                       class="hero-img"
                     />
+                    </a>
                     </li>
                     <li>
                       <a href="index.html">
@@ -328,7 +160,18 @@
                         title="Baldurs Gate 3"
                         class="hero-img"
                       />
+                      </a>
                       </li>
+                      <li>
+                        <a href="index.html">
+                        <img
+                          src="images/spyro.jpg"
+                          alt="Spyro: Reignited Trilogy"
+                          title="Spyro: Reignited Trilogy"
+                          class="hero-img"
+                        />
+                        </a>
+                        </li>
                       <li>
                         <a href="index.html">
                         <img
@@ -337,28 +180,12 @@
                           title="Dragon Quest III"
                           class="hero-img"
                         />
+                        </a>
                         </li>
-                        <li>
-                          <a href="index.html">
-                          <img
-                            src="images/spyro.jpg"
-                            alt="Spyro: Reignited Trilogy"
-                            title="Spyro: Reignited Trilogy"
-                            class="hero-img"
-                          />
-                          </li>
-                          <li>
-                            <a href="index.html">
-                            <img
-                              src="images/palworld.jpg"
-                              alt="Palworld"
-                              title="Palworld"
-                              class="hero-img"
-                            />
-                            </li>
               </ul>
-              </div>
+            </div>
           </div>
-          </section>
+        </section>
+        </main>
   </body>
 </html>
