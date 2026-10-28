@@ -60,29 +60,23 @@ hero-gradient: linear-gradient(to right, muted-purple:#FCA533, yellow:#F9BC6D, c
 
 :root {
   --top-nav: #3D4947;
-  --mid-nav: #384342;
-  --bottom-nav: #4B595D;
-  --search-box-fill: #5B6A68;
-  --search-box-stroke: #748381;
+  --bottom-nav: #384342;
   --light-gray: #C5C3C0;
   --white: #FFFFFF;
   --bright-blue: #15BEF7;
   --muted-yellow: #FAE59D;
+  --dark-magenta: #5F313C;
+  --green: #7FA339;
 
-  --gradient-defalt: radial-gradient(
+  --gradient-default: radial-gradient(
     circle at center,
-    rgba(249, 188, 109, 1) 0%
+    rgba(249, 188, 109, 1) 0%,
     rgba(247, 159, 112, 1) 100%
   );
   --gradient-active: radial-gradient(
     circle at center,
-    rgba(242, 118, 52, 1) 0%
+    rgba(242, 118, 52, 1) 0%,
     rgba(252, 165, 51, 1) 100%
-  );
-  --hero-gradient: linear-gradient(
-    180deg,
-    rgba(149, 109, 129, 1) 65%,
-    rgba(249, 188, 109, 1) 87% rgb(252, 218, 201) 100%
   );
 
   --fonttype-hero-text: "New Rocker", sans-serif;
@@ -94,32 +88,150 @@ hero-gradient: linear-gradient(to right, muted-purple:#FCA533, yellow:#F9BC6D, c
 
   /* Desktop Specific */
 
-  --fontsize-medium: 2.8rem;
-  --fontsize-large: 4.8rem;
-  --fontsize-h1: 7.8rem;
-  --fontsize-h2: 4rem;
-  --fontsize-h3: 3.4rem;
-  --fontsize-h4: 1.6rem;
-  --fontsize-h5: 1.4rem;
-  --fontsize-h6: 1.2rem;
+  --fontsize-h1: 78px;
+  --fontsize-h2: 40px;
+  --fontsize-h3: 34px;
+  --fontsize-h4: 28px;
+  --fontsize-h5: 16px;
+  --fontsize-h6: 14px;
 
-  --lineheight-medium: 3.9rem;
-  --lineheight-large:6.8rem;
-  --lineheight-h1: 0.947rem;
-  --lineheight-h2: 0.947rem;
-  --lineheight-h3: 4.2rem;
-  --lineheight-h4: 1.8rem;
-  --lineheight-h5: 1.6rem;
-  --lineheight-h6: 1.4rem;
+  --lineheight-h1: 85.8px;
+  --lineheight-h2: 44px;
+  --lineheight-h3: 34px;
+  --lineheight-h4: 30.8px;
+  --lineheight-h5: 19.8px;
+  --lineheight-h6: 15.4px;
 }
 
 a {
   text-decoration: none;
 }
 
-h1 {
-  text-decoration: underline;
+.btn-default {
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-black);
+  font-style: normal;
+  font-size: var(--fontsize-h4);
+  text-transform: uppercase;
+  color: var(--dark-magenta);
+  background: var(--gradient-default);
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-top-left-radius: 55px;
+  border-bottom-right-radius: 55px;
 }
+
+.btn-default:hover {
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-black);
+  font-style: normal;
+  font-size: var(--fontsize-h4);
+  text-transform: uppercase;
+  color: var(--dark-magenta);
+  background: var(--gradient-active);
+  padding-left: 140px;
+  padding-right: 140px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  border-top-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+}
+
+h1 {
+  font-family: var(--fonttype-hero-text);
+  font-weight: var(--fontweight-regular);
+  font-style: normal;
+  font-size: var(--fontsize-h1);
+  line-height: var(--lineheight-h1);
+  color: var(--muted-yellow);
+  text-transform: capitalize;
+}
+
+h2 {
+  font-family: var(--fonttype-hero-text);
+  font-weight: var(--fontweight-regular);
+  font-style: normal;
+  font-size: var(--fontsize-h2);
+  line-height: var(--lineheight-h2);
+  color: var(--muted-yellow);
+  text-transform: capitalize;
+}
+
+h3 {
+  font-family: var(--fonttype-hero-text);
+  font-weight: var(--fontweight-regular);
+  font-style: normal;
+  font-size: var(--fontsize-h3);
+  line-height: var(--lineheight-h3);
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+h4 {
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-black);
+  font-style: normal;
+  font-size: var(--fontsize-h4);
+  line-height: var(--lineheight-h4);
+  color: var(--white);
+  text-transform: capitalize;
+}
+
+h5 {
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-bold);
+  font-style: normal;
+  font-size: var(--fontsize-h5);
+  line-height: var(--lineheight-h5);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-regular);
+  font-style: normal;
+  font-size: var(--fontsize-h6);
+  line-height: var(--lineheight-h6);
+  color: var(--light-gray);
+  text-transform: capitalize;
+}
+
+.btn-notification{
+  border: none;
+  background-color: var(--green);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+  cursor:pointer;
+}
+
+.btn-steam-news{
+  border: none;
+  background-color: var(--top-nav);
+  padding-left: 23px;
+  padding-right: 23px;
+  padding-top: 12px;
+  padding-bottom: 6px;
+  border-radius: 10px;
+}
+
+.hero-img{
+  width: 260px;
+  height: 385px;
+  border-radius: 0px;
+}
+
+.wishlist-img{
+  width: 199px;
+  height: 299px;
+  border-radius: 0px;
+}
+
 *,
 *::after,
 *::before {
@@ -131,10 +243,9 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: none;
   z-index: 10;
-  background-color: white;
+  background-color: var(--dark-magenta);
   width: 500px;
   max-width: 80%;
 }
@@ -146,7 +257,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 .modal-header .title {
   font-size: 1.25rem;
