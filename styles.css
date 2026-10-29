@@ -238,15 +238,16 @@ h6 {
 .bottom-nav{
   display:flex;
   align-items:center;
-  gap:28px; /*check this!*/
-  background-color: var(--bottom-nav);
+  gap:28px;
+  padding-block: 25px;
+  background-color: var(--bottom-nav); /*check this!*/
 }
 
 .right-btns{
   margin-left:auto;
 }
 
-.top-nav ul, .arrow-nav-btns li, .main-menu-nav ul{
+.top-nav ul, .arrow-nav-btns li, .main-menu-nav ul, .right-btns ul{
   display:flex;
   align-items:center;
   gap: 20px; /*check this!*/
@@ -267,11 +268,6 @@ h6 {
 
 .steam-news-btn{
   height:20px; /*check this!*/
-}
-
-.featured-games ul{
-  display: flex;
-  justify-content: space-between;
 }
 
 .hero {
@@ -299,12 +295,33 @@ h6 {
 
 .featured-games{
   flex: 0 0 100%;
-  margin-top: 80px; /*check this!*/
+  min-width:0;
+  margin-top: 80px;
+    overflow: hidden; /*check this!*/
 }
 
 .featured-games ul{
-  justify-content: space-between;
-  padding-inline:20px;
+  display: flex;
+  width:max-content;
+  animation: 35s game-carosel linear infinite;
+}
+
+.featured-games ul:hover{
+  animation-play-state: paused;
+}
+
+.featured-games li{
+  flex: 0 0 auto;
+  margin-right: 20px;
+}
+
+@keyframes game-carosel{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
 }
 
 .hero-left h3{
@@ -342,7 +359,6 @@ h6 {
   position: relative;
   display: block;
   padding: 0;
-  display: flex;
   justify-content: space-between;
   align-items: center; /*check this!*/
 }
