@@ -239,6 +239,7 @@ h6 {
   display:flex;
   align-items:center;
   gap:28px; /*check this!*/
+  background-color: var(--bottom-nav);
 }
 
 .right-btns{
@@ -251,9 +252,9 @@ h6 {
   gap: 20px; /*check this!*/
 }
 
-.main-menu-nave .active h5{
+.main-menu-nav .active h5{
   color: var(--bright-blue);
-  boarder-bottom:2px solid var(--bright-blue);
+  border-bottom:2px solid var(--bright-blue);
 }
 
 .logo{
@@ -286,12 +287,14 @@ h6 {
 }
 
 .hero-left{
-  flex: 1 1 50%;
+  flex: 1 1 0;
+  min-width: 0;
   padding-left:170px; /*check this!*/
 }
 
 .hero-right{
-  flex: 1 1 50%; /*check this!*/
+  flex: 1 1 0;
+  min-width:0; /*check this!*/
 }
 
 .featured-games{
@@ -328,7 +331,7 @@ h6 {
   z-index: 10;
   background-color: var(--dark-magenta);
   text-align: center;
-  padding: 40px 40px 50px
+  padding: 40px 40px 50px;
   width: 900px;
   max-width: 90%; /*check this!*/
 }
@@ -336,8 +339,8 @@ h6 {
   transform: translate(-50%, -50%) scale(1);
 }
 .modal-header {
-  position: relative
-  display: block
+  position: relative;
+  display: block;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -355,7 +358,7 @@ h6 {
   position: absolute;
   top:-24px;
   right:-24px;
-  color: var(--white)
+  color: var(--white);
   font-size: 2.5rem;
   font-weight: bold; 
   line-height: 1;/*check this!*/
