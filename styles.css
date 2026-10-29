@@ -108,6 +108,8 @@ a {
 }
 
 .btn-default {
+  display: inline-block;
+  text-align: center;
   font-family: var(--fonttype-majority-text);
   font-weight: var(--fontweight-black);
   font-style: normal;
@@ -115,28 +117,13 @@ a {
   text-transform: uppercase;
   color: var(--dark-magenta);
   background: var(--gradient-default);
-  padding-left: 140px;
-  padding-right: 140px;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  padding: 26px 140px;
   border-top-left-radius: 55px;
   border-bottom-right-radius: 55px;
 }
 
 .btn-default:hover {
-  font-family: var(--fonttype-majority-text);
-  font-weight: var(--fontweight-black);
-  font-style: normal;
-  font-size: var(--fontsize-h4);
-  text-transform: uppercase;
-  color: var(--dark-magenta);
   background: var(--gradient-active);
-  padding-left: 140px;
-  padding-right: 140px;
-  padding-top: 26px;
-  padding-bottom: 26px;
-  border-top-left-radius: 55px;
-  border-bottom-right-radius: 55px;
 }
 
 h1 {
@@ -213,9 +200,9 @@ h6 {
 .btn-steam-news{
   border: none;
   background-color: var(--top-nav);
-  padding-left: 23px;
-  padding-right: 23px;
-  padding-top: 12px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-top: 6px;
   padding-bottom: 6px;
   border-radius: 10px;
 }
@@ -232,6 +219,100 @@ h6 {
   border-radius: 0px;
 }
 
+.top-nav{
+  background-color: var(--top-nav);
+  padding-top:21px;
+  padding-bottom:20px;
+}
+
+.top-nav, .bottom-nav{
+  padding-inline:24px
+}
+
+.top-nav{
+  display:flex;
+  align-items: center;
+  gap:22px;
+}
+
+.bottom-nav{
+  display:flex;
+  align-items:center;
+  gap:28px; /*check this!*/
+}
+
+.right-btns{
+  margin-left:auto;
+}
+
+.top-nav ul, .arrow-nav-btns li, .main-menu-nav ul{
+  display:flex;
+  align-items:center;
+  gap: 20px; /*check this!*/
+}
+
+.main-menu-nave .active h5{
+  color: var(--bright-blue);
+  boarder-bottom:2px solid var(--bright-blue);
+}
+
+.logo{
+  height:20px; /*check this!*/
+}
+
+.back-arrow, .forward-arrow{
+  height:14px; /*check this!*/
+}
+
+.steam-news-btn{
+  height:20px; /*check this!*/
+}
+
+.featured-games ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero {
+  background-image: url("images/hero-page-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.hero-container{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  padding: 90px 0 60px; /*check this!*/
+}
+
+.hero-left{
+  flex: 1 1 50%;
+  padding-left:170px; /*check this!*/
+}
+
+.hero-right{
+  flex: 1 1 50%; /*check this!*/
+}
+
+.featured-games{
+  flex: 0 0 100%;
+  margin-top: 80px; /*check this!*/
+}
+
+.featured-games ul{
+  justify-content: space-between;
+  padding-inline:20px;
+}
+
+.hero-left h3{
+  text-transform: none;
+}
+.modal-body ul{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 *,
 *::after,
 *::before {
@@ -246,17 +327,21 @@ h6 {
   border: none;
   z-index: 10;
   background-color: var(--dark-magenta);
-  width: 500px;
-  max-width: 80%;
+  text-align: center;
+  padding: 40px 40px 50px
+  width: 900px;
+  max-width: 90%; /*check this!*/
 }
 .modal.active {
   transform: translate(-50%, -50%) scale(1);
 }
 .modal-header {
-  padding: 10px 15px;
+  position: relative
+  display: block
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; /*check this!*/
 }
 .modal-header .title {
   font-size: 1.25rem;
@@ -267,12 +352,33 @@ h6 {
   border: none;
   outline: none;
   background: none;
-  font-size: 1.25rem;
-  font-weight: bold;
+  position: absolute;
+  top:-24px;
+  right:-24px;
+  color: var(--white)
+  font-size: 2.5rem;
+  font-weight: bold; 
+  line-height: 1;/*check this!*/
 }
+
+.modal-header h2{
+  font-family: var(--fonttype-majority-text);
+  font-weight: var(--fontweight-black);
+  color: var(--white);
+  text-transform: none;
+  margin-top:8px; /*check this!*/
+}
+
 .modal-body {
-  padding: 10px 15px;
+  padding: 40px 0; /*check this!*/
 }
+
+.modal-body ul{
+  display:flex;
+  justify-content: center;
+  gap: 32px; /*check this!*/
+}
+
 #overlay {
   position: fixed;
   opacity: 0;
