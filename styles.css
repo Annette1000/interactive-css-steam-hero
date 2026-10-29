@@ -382,6 +382,11 @@ h6 {
   gap: 32px; /*check this!*/
 }
 
+.modal-body li:hover {
+  transform: scale(1.5);
+  transition: transform 500ms ease-in-out;
+}
+
 #overlay {
   position: fixed;
   opacity: 0;
