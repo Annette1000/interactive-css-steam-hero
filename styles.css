@@ -108,6 +108,9 @@ a {
 }
 
 .btn-default {
+  position: relative;
+  isolation:isolate;
+  overflow: hidden;
   display: inline-block;
   text-align: center;
   font-family: var(--fonttype-majority-text);
@@ -122,8 +125,22 @@ a {
   border-bottom-right-radius: 55px;
 }
 
-.btn-default:hover {
+.btn-default::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
   background: var(--gradient-active);
+  transform: translate(-50%, 50%) scale(0);
+  transition: transform 450ms ease-in-out;
+  pointer-events:none;
+}
+.btn-default:hover::before, .btn-default:focus-visible::before {
+  transform: translate(-50%, 50%) scale(2.2);
 }
 
 h1 {
